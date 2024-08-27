@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.text-from {
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 32px !important;
+}
+
+.hbd-text {
+  text-align: center !important;
+  font-weight: 600 !important;
+  color: white !important;
+  font-size: 72px !important;
+  line-height: 1 !important;
+  margin-top: 170px !important;
+  margin-bottom: 1.75rem !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.love-text {
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-size: 36px !important;
+  line-height: 2.5rem !important;
+  color: #397bbd !important;
+  margin-bottom: 3.5rem !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.frame-shape {
+  width: 150px;
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  height: auto;
+}
+
+.star-shape {
+  width: 190px;
+  position: absolute;
+  top: 110px;
+  left: 1100px;
+  height: auto;
+}
+
+.ring-shape {
+  width: 200px;
+  position: absolute;
+  top: 160px;
+  left: 500px;
+  height: auto;
+}
+
+.diamond-shape {
+  width: 140px;
+  position: absolute;
+  top: 400px;
+  left: 880px;
+  height: auto;
+}
+
+.worm-shape {
+  width: 180px;
+  position: absolute;
+  top: 320px;
+  left: 210px;
+  height: auto;
+}
+
+.animate-slow {
+  animation-duration: 4s;
+}
+
+.modal-dialog-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-dialog-content::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.modal-dialog-content::-webkit-scrollbar-thumb {
+  background: #a6a6a6;
+  border-radius: 5px;
+}
+
+@media (max-width: 575px) {
+  header {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
+  main {
+    padding-left: -1rem !important;
+  }
+
+  .text-from {
+    font-size: 1.4rem !important;
+  }
+
+  .ball-1 {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.25rem;
+  }
+
+  .ball-2 {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.25rem;
+  }
+
+  .ball-3 {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.25rem;
+  }
+
+  .hbd-text {
+    font-size: 2.6rem !important;
+    margin-top: 29dvh !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .love-text {
+    font-size: 1.4rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .frame-shape {
+    width: 6rem;
+    top: 17dvh;
+    left: 5dvw;
+  }
+
+  .star-shape {
+    width: 7rem;
+    top: 19dvh;
+    left: 67dvw;
+  }
+
+  .ring-shape {
+    /* width: 6rem;
+    top: 19dvh;
+    left: 67dvw; */
+    display: none;
+  }
+
+  .diamond-shape {
+    width: 6rem;
+    top: 70dvh;
+    left: 62dvw;
+  }
+
+  .worm-shape {
+    width: 6rem;
+    top: 68dvh;
+    left: 10dvw;
+    z-index: 1;
+  }
+}
+
+/* @media (min-width: 576px) and (max-width: 767px) {
+} */
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .hbd-text {
+    font-size: 4rem !important;
+    margin-top: 30dvh !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .love-text {
+    font-size: 2.4rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .frame-shape {
+    width: 10rem;
+    top: 16dvh;
+    left: 7dvw;
+  }
+
+  .star-shape {
+    width: 10rem;
+    top: 19dvh;
+    left: 67dvw;
+  }
+
+  .ring-shape {
+    /* width: 6rem;
+    top: 19dvh;
+    left: 67dvw; */
+    display: none;
+  }
+
+  .diamond-shape {
+    width: 10rem;
+    top: 70dvh;
+    left: 62dvw;
+  }
+
+  .worm-shape {
+    width: 10rem;
+    top: 64dvh;
+    left: 10dvw;
+    z-index: 1;
+  }
+}
